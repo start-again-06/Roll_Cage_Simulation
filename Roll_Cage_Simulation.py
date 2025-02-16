@@ -48,7 +48,7 @@ class RollCageSimulation:
     
     def factor_of_safety(self):
         yield_strength = float(input("Enter Yield Strength of Material (Pa): "))
-        self.stresses = np.random.uniform(0.1 * yield_strength, 0.9 * yield_strength, len(self.elements))  # Placeholder stress values
+        self.stresses = np.random.uniform(0.377 * yield_strength, 0.577 * yield_strength, len(self.elements))  # Placeholder stress values
         fos = yield_strength / self.stresses
         return fos
     
