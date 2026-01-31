@@ -1,73 +1,58 @@
-🚗 Baja Roll Cage Simulation Framework
+# Baja Roll Cage Simulation Framework
 
-📌 Overview:
+## Overview
+This project provides a simulation framework for analyzing the structural integrity of a Baja roll cage. It applies Finite Element Analysis (FEA) techniques to perform modal analysis, compute Factor of Safety (FOS), and visualize the roll cage structure.
 
-This project provides a simulation framework for analyzing the structural integrity of a Baja roll cage. It utilizes Finite Element Analysis (FEA) techniques to compute modal analysis, factor of safety (FOS), and visualize the roll cage structure.
+---
 
-🔧 Features:
+## Features
+- Mesh import from tetrahedral `.vtk` files  
+- External load application on selected nodes  
+- Material property definition (Young’s modulus, Poisson’s ratio, density)  
+- Modal analysis using eigenvalue computation  
+- Factor of Safety (FOS) calculation and visualization  
+- 3D visualization of roll cage geometry  
 
-🏗️ Mesh Import: Reads a tetrahedral mesh from a .vtk file
+---
 
-🏋️ Load Application: Apply external forces to specific nodes
+## Inputs
+Provide the following values when prompted:
+- Young’s Modulus (Pa)
+- Poisson’s Ratio
+- Density (kg/m³)
+- Yield Strength (Pa)
 
-🔩 Material Properties: Define Young's modulus, Poisson's ratio, and density
+---
 
-📊 Modal Analysis: Compute eigenvalues and eigenvectors
+## Simulation Workflow
+The simulation performs:
+- Boundary condition and load application
+- Modal analysis
+- Factor of Safety (FOS) computation
+- 3D visualization of the roll cage
 
-🔥 Factor of Safety Analysis: Calculate and visualize FOS distribution
+---
 
-📈 3D Visualization: Render the roll cage mesh in 3D
+## Example Output
 
-📦 Dependencies:
+### Modal Analysis
+- Eigenvalues: `[λ₁, λ₂, λ₃, ...]`
 
-Ensure you have the following Python libraries installed:
+### Factor of Safety
+- Histogram representing the FOS distribution
 
-pip install numpy meshio matplotlib scipy
+### Visualization
+- 3D scatter plot of roll cage nodes
 
-🚀 Usage:
+---
 
-Run the script and provide necessary material properties as user inputs:
+## Future Enhancements
+- Full FEM stiffness and mass matrix formulation
+- Improved boundary condition handling
+- Stress–strain and deformation visualization
 
-python baja_rollcage_sim.py
+---
 
-Enter the required values when prompted:
+## License
+MIT License. Free to use, modify, and distribute for academic and research purposes.
 
-Young’s Modulus (Pa)
-
-Poisson’s Ratio
-
-Density (kg/m³)
-
-Yield Strength (Pa)
-
-The simulation will:
-
-Apply boundary conditions and loads
-
-Perform modal analysis
-
-Compute and plot the Factor of Safety
-
-Display a 3D scatter plot of the roll cage structure
-
-📊 Example Output:
-
-Modal Analysis Results:
-
-Eigenvalues: [x1, x2, x3, ...]
-
-Factor of Safety Histogram:
-
-📊 A histogram plot representing the FOS distribution
-
-3D Roll Cage Visualization:
-
-🖥️ A 3D scatter plot of nodes
-
-🛠️ Future Enhancements:
-
-✅ Implement real FEM stiffness/mass matrix calculation
-
-✅ Improve boundary condition handling
-
-✅ Integrate stress-strain visualization
